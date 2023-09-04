@@ -1,0 +1,130 @@
+{
+    "sneakers": [
+        {
+            "id": 1,
+            "name": "Nike Air Force 1 Low All White",
+            "price": 12990,
+            "size": [37, 40, 43],
+            "url": "https://sergeev-store.ru/image/cache/tild3364-6539-4965-b232-363632666265/9BD492F4-6807-4EA6-8-1000x1000.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "Nike Air Force 1 Low White Green Brown",
+            "price": 12990,
+            "size": [39,41,42,44],
+            "url": "https://nike-air-force1.com/image/cache/catalog/Low/white-green-brown/23_1-1200x600.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Nike Air Force 1 Shadow Pastel",
+            "price": 13690,
+            "size": [37,41,44],
+            "url": "https://static.insales-cdn.com/images/products/1/1228/711238860/nike-wmns-af1-shadow-pastel_16096667_43119786_2048.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Nike Air Force 1 '07 White/Black",
+            "price": 12990,
+            "size": [39,40,42,45],
+            "url": "https://destroyshop.ru/images/thumbnails/560/560/detailed/13731/b8f83c95346711ed8990ac1f6b72b910_514d540c34da11ed8990ac1f6b72b910.png"
+        },
+        {
+            "id": 5,
+            "name": "Nike Air Force 1 Low Canberra Grey Brown",
+            "price": 11000,
+            "size": [38,39,41,42,44],
+            "url": "https://nike-air-force1.com/image/cache/catalog/Low/canberra-grey-brown/h3-1200x600.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Nike Air Force 1 LV8 White/Grey",
+            "price": 14590,
+            "size": [39,41,42,43,44],
+            "url": "https://krostore.ru/images/product/l/3371-nike-air-force-1-mid-007-d771e.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Nike Air Force 1 '07 “What the LA”",
+            "price": 24000,
+            "size": [37,38,39,41,42,44],
+            "url": "https://static.cdek.shopping/images/shopping/112c3b46199b446c83968780d670d4e5.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Nike SB Dunk Low NeckFace Picture Black",
+            "price": 19990,
+            "size": [39,41,42,44,45],
+            "url": "https://www.thenextsole.com/storage/images/DQ4488-001.png"
+        },
+        {
+            "id": 9,
+            "name": "Nike Air Force 1 Low All Black",
+            "price": 13000,
+            "size": [39,41,42,43,44],
+            "url": "https://myreact.ru/wp-content/uploads/2020/07/air-force-1-07-shoe-DS3Q3T-1.jpg.webp"
+        },
+        {
+            "id": 10,
+            "name": "Nike Air Zoom Spiridon Cage 2 White",
+            "price": 14590,
+            "size": [38,39,44],
+            "url": "https://nike-air-force1.com/image/cache/catalog/zoom/white/white-1200x600.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Nike SB Dunk Low De La Soul",
+            "price": 16990,
+            "size": [40,42,44],
+            "url": "https://www.thenextsole.com/storage/images/789841-332.png"
+        },
+        {
+            "id": 12,
+            "name": "Nike SB Dunk Low Paisley Brown",
+            "price": 18990,
+            "size": [39,41],
+            "url": "https://wayoff.ru/wp-content/uploads/2023/03/NikeSBDunkLowProPaisleyBrown.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Nike Air Force 1 Shadow Mint Pistachio Frost",
+            "price": 21990,
+            "size": [37],
+            "url": "https://krostore.ru/images/product/l/nike-air-force-1-shadow-pistachio-frost-myatnye-60f0d.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Nike Air Max Tailwind V x Skepta",
+            "price": 16990,
+            "size": [37,40,44],
+            "url": "https://wayoff.ru/wp-content/uploads/2023/03/skepta1.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Nike Air Force 1 X Travis Scott Cactus Jack",
+            "price": 34790,
+            "size": [40,41,42,44],
+            "url": "https://wayoff.ru/wp-content/uploads/2023/03/CN2405-900_1.png"
+        },
+        {
+            "id": 16,
+            "name": "Nike Air Max 90 Essential",
+            "price": 18490,
+            "size": [39,41,42,44,45],
+            "url": "https://sneakers-type.ru/wp-content/uploads/2021/07/Krossovki-Nike-Air-Max-90-Essential-Raptors-e1625671545311.png"
+        },
+        {
+            "id": 17,
+            "name": "Nike Air Force 1 React White",
+            "price": 15990,
+            "size": [37,38,41,42,44],
+            "url": "https://myreact.ru/wp-content/uploads/2020/04/PSX_20200705_002601.jpg.webp"
+        },
+        {
+            "id": 18,
+            "name": "Nike Air Force 1 Mid '07 LV8 White",
+            "price": 11990,
+            "size": [39,41,42,44],
+            "url": "https://nike-rus.com/image/cache/catalog/air-force/102-1340x1000.jpg"
+        }
+    ]
+}
