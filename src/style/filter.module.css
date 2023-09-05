@@ -1,0 +1,17 @@
+.filterGroup {
+    width: 24rem;
+    margin-top: 1rem;
+}
+
+.filterGroup span {
+    font-size: 1.4rem;
+}
+
+.filterGroup svg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.submitButton {
+    background: #444B58;
+}

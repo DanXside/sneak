@@ -29,7 +29,7 @@ const PromoBlock = () => {
                     Кроссовки известных брендов 
                     с доставкой по России и СНГ
                     </Typography>
-                    <MainButton text="Перейти к покупкам"/>
+                    <MainButton color="error" text="Перейти к покупкам"/>
                 </Box>
             </Container>   
         </Box>
