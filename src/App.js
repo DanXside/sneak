@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import HomePage from "./components/pages/HomePage";
 
+import { ThemeProvider } from "@mui/styles";
+import theme from './components/mui_styles/theme';
+
 function App() {
 
   return (
     <div>
-      <HomePage />
+      <ThemeProvider theme={theme}>
+        <HomePage />
+      </ThemeProvider>
     </div>
   );
 }

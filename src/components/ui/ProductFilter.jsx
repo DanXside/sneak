@@ -4,55 +4,8 @@ import { Box, Typography, Slider, FormControl, FormLabel, FormGroup, FormControl
 import styles from '../../style/filter.module.css';
 import MainButton from "./MainButton";
 
-const ProductFilter = () => {
-    const [value, setValue] = useState([10000, 30000]);
-    const [sizes, setSizes] = useState([
-        {
-            id: 0,
-            value: '37',
-            check: false
-        },
-        {
-            id: 1,
-            value: '38',
-            check: false
-        },
-        {
-            id: 2,
-            value: '39',
-            check: false
-        },
-        {
-            id: 3,
-            value: '40',
-            check: false
-        },
-        {
-            id: 4,
-            value: '41',
-            check: false
-        },
-        {
-            id: 5,
-            value: '42',
-            check: false
-        },
-        {
-            id: 6,
-            value: '43',
-            check: false
-        },
-        {
-            id: 7,
-            value: '44',
-            check: false
-        },
-        {
-            id: 8,
-            value: '45',
-            check: false
-        },
-    ]);
+const ProductFilter = ({ value, setValue, sizes, setSizes, setProducts, sortedProducts}) => {
+    
 
     const marks = [
         {
@@ -80,6 +33,10 @@ const ProductFilter = () => {
             return size;
         }));
     };
+
+    function submitFilter() {
+        setProducts(sortedProducts);
+    }
 
     return (
         <Box sx={{
@@ -149,6 +106,7 @@ const ProductFilter = () => {
                 marks={marks}
                 valueLabelDisplay="auto"
                 color="secondary"
+                disableSwap
                 sx={{
                     fontSize: '1.4rem'
                 }}
@@ -176,7 +134,11 @@ const ProductFilter = () => {
                     }
                 </FormGroup>
             </FormControl>
-            <MainButton text="Применить" color="secondary"/>
+            <MainButton 
+                handle={submitFilter} 
+                text="Применить" 
+                color="secondary"
+            />
         </Box>
     )
 }

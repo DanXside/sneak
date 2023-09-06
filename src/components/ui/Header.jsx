@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import { AppBar, Box, Divider, IconButton, Toolbar, Typography, Badge } from "@mui/material";
 import { ShoppingBasket } from "@mui/icons-material";
+import { OrderContext } from "../context";
 
 const Header = () => {
+    const {order, setOrder} = useContext(OrderContext);
+
     return (
         <AppBar sx={{
             position: 'static', 
@@ -73,7 +76,7 @@ const Header = () => {
                     </Typography>
                 </Box>
                 <IconButton size="large" sx={{marginLeft: '3rem'}}>
-                    <Badge badgeContent={20} color="error" sx={{fontSize: '2rem'}}>
+                    <Badge badgeContent={order.count} color="error" sx={{fontSize: '2rem'}}>
                         <ShoppingBasket sx={{width: '3rem', height: '3rem', color: 'white'}}/>
                     </Badge>
                 </IconButton>

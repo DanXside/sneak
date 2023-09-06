@@ -1,7 +1,24 @@
-import React from "react";
-import {Card, CardActionArea, CardActions, CardContent, Button, Box, Typography} from '@mui/material';
+import React, { useContext, useState } from "react";
+import {Card, CardActionArea, CardActions, CardContent, Button, Box, Typography, Snackbar} from '@mui/material';
+import { OrderContext } from "./context";
+
+import  styles from '../style/catalogItem.module.css';
+import '../style/snackbar.css';
 
 const CatalogItem = ({product}) => {
+    const {order, setOrder} = useContext(OrderContext);
+
+    const [open, setOpen] = useState(false);
+
+    function addOrder() {
+        setOrder(prev => ({item: product, count: prev.count + 1}));
+        setOpen(true);
+    };
+
+    function handleClose() {
+        setOpen(false);
+    }
+
     return (
         <Card sx={{
             width: '25rem', 
@@ -35,9 +52,18 @@ const CatalogItem = ({product}) => {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="large" color="primary" sx={{fontWeight: '800', fontSize: '1rem'}}>
+                <Button size="large" onClick={addOrder} color="primary" sx={{fontWeight: '800', fontSize: '1rem'}}>
                     В корзину
                 </Button>
+                <Snackbar 
+                    anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+                    open={open}
+                    autoHideDuration={2000}
+                    onClose={handleClose}
+                    message="Товар добавлен в корзину"
+                    key="top"
+                    className={styles.snackbarAdd}
+                />
             </CardActions>
         </Card>
     )
