@@ -1,0 +1,22 @@
+
+.MuiPaper-root {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.MuiList-root {
+    padding: 2rem !important;
+}
+
+.MuiListItem-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem;
+}
+
+.MuiTooltip-tooltip {
+    font-size: 1.4rem;
+}

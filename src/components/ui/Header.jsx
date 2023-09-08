@@ -1,10 +1,13 @@
-import React, {useContext} from "react";
-import { AppBar, Box, Divider, IconButton, Toolbar, Typography, Badge } from "@mui/material";
+import React, {useContext, useState} from "react";
+import { AppBar, Box, Divider, IconButton, Toolbar, Typography, Badge, Drawer } from "@mui/material";
 import { ShoppingBasket } from "@mui/icons-material";
 import { OrderContext } from "../context";
+import Basket from "./Basket";
 
 const Header = () => {
     const {order, setOrder} = useContext(OrderContext);
+
+    const [openDraw, setOpenDraw] = useState(false);
 
     return (
         <AppBar sx={{
@@ -77,9 +80,15 @@ const Header = () => {
                 </Box>
                 <IconButton size="large" sx={{marginLeft: '3rem'}}>
                     <Badge badgeContent={order.count} color="error" sx={{fontSize: '2rem'}}>
-                        <ShoppingBasket sx={{width: '3rem', height: '3rem', color: 'white'}}/>
+                        <ShoppingBasket onClick={() => setOpenDraw(true)} sx={{width: '3rem', height: '3rem', color: 'white'}}/>
                     </Badge>
                 </IconButton>
+                <Drawer anchor={"top"}
+                    open={openDraw}
+                    onClose={() => setOpenDraw(false)}
+                >
+                    <Basket />
+                </Drawer>
             </Toolbar>
             <Divider sx={{width: '153.6rem', margin: '0 auto', background: '#ffffff', opacity: 0.5}}/>
         </AppBar>

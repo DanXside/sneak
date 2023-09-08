@@ -10,8 +10,14 @@ const CatalogItem = ({product}) => {
 
     const [open, setOpen] = useState(false);
 
-    function addOrder() {
-        setOrder(prev => ({item: product, count: prev.count + 1}));
+    function addOrder(id) {
+        if (order.item.includes(product)) {
+            product.count++;
+            setOrder(prev => ({item: [...order.item],count: prev.count + 1, totalCount: prev.totalCount + product.price}));
+        } else {
+            setOrder(prev => ({item: [...order.item, product], count: prev.count + 1, totalCount: prev.totalCount + product.price}));
+        }
+        console.log(order.item);
         setOpen(true);
     };
 

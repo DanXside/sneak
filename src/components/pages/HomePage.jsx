@@ -4,7 +4,7 @@ import CatalogList from "../CatalogList";
 import { OrderContext } from "../context";
 
 const HomePage = () => {
-    const [order, setOrder] = useState({item: [], count: 0 });
+    const [order, setOrder] = useState({item: [], count: 0, totalCount: 0 });
 
     return (
         

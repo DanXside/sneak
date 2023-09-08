@@ -6,7 +6,6 @@ import MainButton from "./MainButton";
 
 const ProductFilter = ({ value, setValue, sizes, setSizes, setProducts, sortedProducts}) => {
     
-
     const marks = [
         {
             value: 0,
