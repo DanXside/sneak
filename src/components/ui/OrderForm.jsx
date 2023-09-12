@@ -1,11 +1,16 @@
 import { TextField, Button } from "@mui/material";
 import React from "react";
 
-import { useForm, Controller } from "react-hook-form";
+import { useForm, Controller, useFormState } from "react-hook-form";
+import InputMask from "react-input-mask";
 import '../../style/form.css';
 
 const OrderForm = () => {
     const {control, handleSubmit} = useForm();
+
+    const {errors} = useFormState({
+        control
+    });
 
     const onSubmit = data => console.log(data);
 
@@ -14,6 +19,7 @@ const OrderForm = () => {
             <Controller
                 name="name"
                 control={control}
+                rules={{required: 'Обязательное поле'}}
                 render={({ field }) => (
                     <TextField 
                         variant="filled"
@@ -21,6 +27,8 @@ const OrderForm = () => {
                         type="text"
                         onChange={e => field.onChange(e)}
                         value={field.value}
+                        error={!!errors.name}
+                        helperText={errors.name?.message}
                         sx={{
                             width: '50rem',
                         }}
@@ -29,26 +37,36 @@ const OrderForm = () => {
             />
 
             <Controller
-                name="phone"
                 control={control}
+                name="phone"
+                rules={{required: 'Обязательное поле'}}
                 render={({ field }) => (
-                    <TextField 
-                        variant="filled"
-                        label="Номер телефона"
-                        type="tel"
-                        margin="dense"
+                    <InputMask
+                        mask="+7 (999) 999 999-99"
                         onChange={e => field.onChange(e)}
                         value={field.value}
-                        sx={{
-                            width: '50rem',
-                        }}
-                    />
+                    >
+                        {(inputProps) => <TextField 
+                                            {...inputProps}
+                                            variant="filled"
+                                            label="Ваш телефон"
+                                            type="phone"
+                                            margin="dense"
+                                            error={!!errors.phone}
+                                            helperText={errors.phone?.message}
+                                            sx={{
+                                                width: '50rem',
+                                            }}
+                                        />
+                        }
+                    </InputMask>
                 )}
             />
 
             <Controller
                 name="email"
                 control={control}
+                rules={{required: 'Обязательное поле'}}
                 render={({ field }) => (
                     <TextField 
                         variant="filled"
@@ -57,6 +75,8 @@ const OrderForm = () => {
                         margin="dense"
                         onChange={e => field.onChange(e)}
                         value={field.value}
+                        error={!!errors.email}
+                        helperText={errors.email?.message}
                         sx={{
                             width: '50rem',
                         }}

@@ -4,11 +4,13 @@ import { OrderContext } from "./context";
 
 import  styles from '../style/catalogItem.module.css';
 import '../style/snackbar.css';
+import DetailProduct from "./DetailProduct";
 
-const CatalogItem = ({product}) => {
+const CatalogItem = ({product, sizes, setSizes}) => {
     const {order, setOrder} = useContext(OrderContext);
 
     const [open, setOpen] = useState(false);
+    const [detailOpen, setDetailOpen] = useState(false);
 
     function addOrder(id) {
         if (order.item.includes(product)) {
@@ -17,7 +19,6 @@ const CatalogItem = ({product}) => {
         } else {
             setOrder(prev => ({item: [...order.item, product], count: prev.count + 1, totalCount: prev.totalCount + product.price}));
         }
-        console.log(order.item);
         setOpen(true);
     };
 
@@ -33,7 +34,7 @@ const CatalogItem = ({product}) => {
             flexDirection: 'column', 
             justifyContent: 'space-between'
         }}>
-            <CardActionArea>
+            <CardActionArea onClick={() => setDetailOpen(true)}>
                 <Box sx={{
                     width: '25rem', 
                     height: '15rem', 
@@ -71,6 +72,13 @@ const CatalogItem = ({product}) => {
                     className={styles.snackbarAdd}
                 />
             </CardActions>
+            <DetailProduct 
+                sizes={sizes}
+                setSizes={setSizes} 
+                open={detailOpen} 
+                setOpen={setDetailOpen} 
+                product={product}
+            />
         </Card>
     )
 };

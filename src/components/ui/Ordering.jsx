@@ -61,7 +61,6 @@ const Ordering = ({open, setOpen}) => {
                                 } else {
                                     setOrder(prev => ({item: prev.item.filter(i => i.id !== item.id), count: prev.count - 1, totalCount: prev.totalCount - item.price}));
                                 }
-                                console.log(item.count);
                             }
                             return (
                                 <ListItem key={index + 1} sx={{

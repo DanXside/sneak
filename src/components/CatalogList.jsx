@@ -134,7 +134,12 @@ const CatalogList = () => {
                                 flexWrap: 'wrap'
                             }}>
                                 {products.map((product) => 
-                                    <CatalogItem key={product.url} product={product} />
+                                    <CatalogItem 
+                                        key={product.url} 
+                                        sizes={sizes} 
+                                        setSizes={setSizes}
+                                        product={product} 
+                                    />
                                 )}  
                             </Box>
                         </Box>
