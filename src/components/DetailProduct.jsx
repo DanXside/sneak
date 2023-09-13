@@ -1,9 +1,18 @@
-import { Dialog, Box, Card, CardContent, CardMedia, Typography, Stack, ToggleButtonGroup, ToggleButton } from "@mui/material";
+import { Dialog, Box, Card, CardContent, CardMedia, Typography, Stack, ToggleButtonGroup, ToggleButton, CardActions } from "@mui/material";
 import { styled } from "@mui/styles";
+import DoneIcon from '@mui/icons-material/Done';
+
 import React, { useState } from "react";
 
+import MainButton from "./ui/MainButton";
 
-const DetailProduct = ({open, setOpen, product, sizes, setSizes}) => {
+
+const DetailProduct = ({open, setOpen, product, addOrder}) => {
+    const [size, setSize] = useState(product.size[0]);
+
+    const handleSize = (event, newSize) => {
+        setSize(newSize);
+    };
 
     const ItemDialog = styled(Dialog)(({ theme }) => ({
         '& .MuiPaper-root': {
@@ -93,12 +102,15 @@ const DetailProduct = ({open, setOpen, product, sizes, setSizes}) => {
                         >
                             Выберите размер:
                         </Typography>
-                        <StyledBtnGroup 
+                        <StyledBtnGroup
+                            value={size}
+                            onChange={handleSize}
+                            exclusive 
                             sx={{
                                 marginTop: '2rem'
                             }}
                         >
-                            {product.size.map((s, index) => (
+                            {product.size.map((s) => (
                                 <ToggleButton 
                                     sx={{
                                         fontSize: '1.4rem',
@@ -111,8 +123,103 @@ const DetailProduct = ({open, setOpen, product, sizes, setSizes}) => {
                                 </ToggleButton>
                             ))}
                         </StyledBtnGroup>
+                        <Typography variant="h3" component="h3" 
+                            sx={{
+                                fontWeight: 400,
+                                fontSize: '2.4rem',
+                                color: '#444B58',
+                                marginTop: '2rem',
+                                marginBottom: '3rem'
+                            }}
+                        >
+                            {product.price} p.
+                        </Typography>
+                        <MainButton handle={addOrder} color="error" text="Заказать"/>
+                        <Box marginTop="2rem">
+                            <Typography variant="body2" component="span" sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.6rem',
+                                fontSize: '1.2rem',
+                                fontWeight: 400,
+                                color: '#B2B5BB',
+                            }}>
+                                <DoneIcon /> Бесплатная доставка до двери
+                            </Typography>
+                            <Typography variant="body2" component="span" sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.6rem',
+                                fontSize: '1.2rem',
+                                fontWeight: 400,
+                                color: '#B2B5BB',
+                                marginTop: '0.6rem'
+                            }}>
+                                <DoneIcon /> Оплата заказа при получении
+                            </Typography>
+                            <Typography variant="body2" component="span" sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.6rem',
+                                fontSize: '1.2rem',
+                                fontWeight: 400,
+                                color: '#B2B5BB',
+                                marginTop: '0.6rem'
+                            }}>
+                                <DoneIcon /> Обмен в течении двух недель
+                            </Typography>
+                        </Box>
                     </CardContent>
                 </Card>
+                <Box sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'start',
+                    marginTop: '3rem'
+                }}>
+                    <Box sx={{
+                        width: '52rem'
+                    }}>
+                        <Typography variant="h3" component="h3" sx={{
+                            fontWeight: 600,
+                            fontSize: '2.4rem',
+                            color: '#444B58'
+                        }}>
+                            Описание
+                        </Typography>
+                        <Typography variant="body1" component="p" sx={{
+                            fontWeight: 400,
+                            fontSize: '1.6rem',
+                            color: '#444B58',
+                            width: '43rem',
+                            marginTop: '2rem'
+                        }}>
+                            Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. 
+                        </Typography>
+                    </Box>
+                    <Box sx={{
+                        width: '45rem'
+                    }}>
+                        <Typography variant="h3" component="h3" sx={{
+                            fontWeight: 600,
+                            fontSize: '2.4rem',
+                            color: '#444B58'
+                        }}>
+                            Характеристики
+                        </Typography>
+                        <Typography variant="body1" component="p" sx={{
+                            fontWeight: 400,
+                            fontSize: '1.6rem',
+                            color: '#444B58',
+                            width: '43rem',
+                            marginTop: '2rem'
+                        }}>
+                            Цвета: Разноцветный<br></br>
+                            Состав: Кожа, текстиль, резина<br></br>
+                            Страна: Вьетнам
+                        </Typography>
+                    </Box>
+                </Box>
             </BoxDialog>
         </ItemDialog>
     )

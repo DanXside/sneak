@@ -6,7 +6,7 @@ import  styles from '../style/catalogItem.module.css';
 import '../style/snackbar.css';
 import DetailProduct from "./DetailProduct";
 
-const CatalogItem = ({product, sizes, setSizes}) => {
+const CatalogItem = ({product}) => {
     const {order, setOrder} = useContext(OrderContext);
 
     const [open, setOpen] = useState(false);
@@ -73,11 +73,10 @@ const CatalogItem = ({product, sizes, setSizes}) => {
                 />
             </CardActions>
             <DetailProduct 
-                sizes={sizes}
-                setSizes={setSizes} 
                 open={detailOpen} 
                 setOpen={setDetailOpen} 
                 product={product}
+                addOrder={addOrder}
             />
         </Card>
     )

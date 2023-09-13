@@ -136,8 +136,6 @@ const CatalogList = () => {
                                 {products.map((product) => 
                                     <CatalogItem 
                                         key={product.url} 
-                                        sizes={sizes} 
-                                        setSizes={setSizes}
                                         product={product} 
                                     />
                                 )}  
