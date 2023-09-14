@@ -1,0 +1,24 @@
+.stepForm {
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+}
+
+.stepForm input {
+    background: #ffffff;
+}
+
+.formWrap {
+    position: relative;
+}
+
+.formWrap:before {
+    position: absolute;
+    content: '';
+    background: url(../img/iphone.png) center center/cover no-repeat;
+    top: 2rem;
+    right: -13rem;
+    width: 20rem;
+    height: 40rem;
+    z-index: 10;
+}
