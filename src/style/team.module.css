@@ -1,0 +1,15 @@
+.teamSection {
+    min-height: 119rem;
+    padding: 6rem 0;
+    background: url(../img/backgrounds/team-background.jpg) center center/cover no-repeat;
+}
+
+.gridItem {
+    display: flex;
+    min-height: 46rem;
+}
+
+.gridItem img {
+    width: 100%;
+    height: 40rem;
+}

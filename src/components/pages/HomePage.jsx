@@ -4,6 +4,8 @@ import CatalogList from "../CatalogList";
 import { OrderContext } from "../context";
 import AboutSection from "../AboutSection";
 import SelectionProduct from "../SelectionProduct";
+import TeamBlock from "../TeamBlock";
+import Faq from "../ui/Faq";
 
 const HomePage = () => {
     const [order, setOrder] = useState({item: [], count: 0, totalCount: 0 });
@@ -16,6 +18,8 @@ const HomePage = () => {
                 <CatalogList order={order} setOrder={setOrder} />
                 <AboutSection />
                 <SelectionProduct />
+                <TeamBlock />
+                <Faq />
             </OrderContext.Provider>
         </div>
     )

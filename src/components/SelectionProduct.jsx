@@ -42,24 +42,34 @@ const SelectionProduct = () => {
                     backgroundColor: '#FFF4EE',
                     padding: '4rem 10rem'
                 }}>
-                    <Typography variant="h2" component="h2" sx={{
-                        fontWeight: 600,
-                        fontSize: '3rem',
-                        color: '#444B58'
-                    }}>
-                        Мы подберем идеальную пару для вас
-                    </Typography>
-                    <Typography variant="h3" component="h3" sx={{
-                        fontWeight: 400,
-                        fontSize: '1.6rem',
-                        color: '#808080',
-                        marginTop: '1.5rem'
-                    }}>
-                        Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями 
-                    </Typography>
-                    <Divider sx={{
-                        marginTop: '1rem'
-                    }} />
+                                        {/* Static content */}
+                    {
+                        activeStep === steps.length 
+                        ?
+                        <div></div>
+                        :
+                        <Box>
+                            <Typography variant="h2" component="h2" sx={{
+                                fontWeight: 600,
+                                fontSize: '3rem',
+                                color: '#444B58'
+                            }}>
+                                Мы подберем идеальную пару для вас
+                            </Typography>
+                            <Typography variant="h3" component="h3" sx={{
+                                fontWeight: 400,
+                                fontSize: '1.6rem',
+                                color: '#808080',
+                                marginTop: '1.5rem'
+                            }}>
+                                Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями 
+                            </Typography>
+                            <Divider sx={{
+                                marginTop: '1rem'
+                            }} />
+                        </Box>
+                    }
+                                        {/* Dynamic content */}
                     {
                         activeStep === 0
                         ?
