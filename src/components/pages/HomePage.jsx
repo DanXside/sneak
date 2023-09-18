@@ -6,6 +6,7 @@ import AboutSection from "../AboutSection";
 import SelectionProduct from "../SelectionProduct";
 import TeamBlock from "../TeamBlock";
 import Faq from "../ui/Faq";
+import Contacts from "../Contacts";
 
 const HomePage = () => {
     const [order, setOrder] = useState({item: [], count: 0, totalCount: 0 });
@@ -20,6 +21,7 @@ const HomePage = () => {
                 <SelectionProduct />
                 <TeamBlock />
                 <Faq />
+                <Contacts />
             </OrderContext.Provider>
         </div>
     )
