@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import { AppBar, Box, Divider, IconButton, Toolbar, Typography, Badge, Drawer } from "@mui/material";
+import { AppBar, Box, Divider, IconButton, Toolbar, Typography, Badge, Drawer, Link } from "@mui/material";
 import { ShoppingBasket } from "@mui/icons-material";
 import { OrderContext } from "../context";
 import Basket from "./Basket";
@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <AppBar sx={{
             position: 'static', 
-            background: 'transparent',
+            background: '#484283',
             boxShadow: 0
         }}>
             <Toolbar sx={{width: '153.6rem', margin: '0 auto'}}>
@@ -26,7 +26,7 @@ const Header = () => {
                     SneakMax
                 </Typography>
                 <Box sx={{ width: '100rem', display: 'flex', alignItems: 'center', justifyContent: 'end', gap: '4rem'}}>
-                    <Typography variant="h3" href="#" component="a" sx={{
+                    <Typography variant="h3" href="/catalog" component="a" sx={{
                         textDecoration: 'none',
                         fontSize: '1.8rem',
                         fontWeight: 500,
