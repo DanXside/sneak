@@ -73,6 +73,7 @@ const SizeSelect = () => {
             <Stack direction="row" spacing={12}>
                 {sizes.map((size, index) => (
                     <StyledFormLabel
+                        key="index"
                         label={size.label}
                         control={
                             <Checkbox disabled={checkDisable()} checked={size.checked} onChange={() => handleCheckbox(index)} />
