@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sneak/static/css/main.f482c347.css",
+    "main.js": "/sneak/static/js/main.ca756f61.js",
+    "static/media/about.jpg": "/sneak/static/media/about.74d3167fbc11b7c99c1b.jpg",
+    "static/media/frame-size.jpg": "/sneak/static/media/frame-size.43124e0a387ccb102370.jpg",
+    "static/media/team-3.jpg": "/sneak/static/media/team-3.3aa7cf8aef1c4c527977.jpg",
+    "static/media/team-background.jpg": "/sneak/static/media/team-background.e1fe91cb1b2de4a5efbc.jpg",
+    "static/media/team-2.jpg": "/sneak/static/media/team-2.b1a2bcb2617fa2bdd43e.jpg",
+    "static/media/team-6.jpg": "/sneak/static/media/team-6.42c4d1745ddd0f7761f1.jpg",
+    "static/media/team-5.jpg": "/sneak/static/media/team-5.9eff623653a796285857.jpg",
+    "static/media/team-1.jpg": "/sneak/static/media/team-1.c65c2193e8ff283cabbc.jpg",
+    "static/media/promo.jpg": "/sneak/static/media/promo.a2f5df78fb593d66c53f.jpg",
+    "static/media/team-4.jpg": "/sneak/static/media/team-4.17ae8b9ea4b6347a899a.jpg",
+    "static/media/cross.jpg": "/sneak/static/media/cross.c3d805ff1db757b75295.jpg",
+    "static/media/iphone.png": "/sneak/static/media/iphone.5e2355374362c4cfe1c8.png",
+    "index.html": "/sneak/index.html",
+    "main.f482c347.css.map": "/sneak/static/css/main.f482c347.css.map",
+    "main.ca756f61.js.map": "/sneak/static/js/main.ca756f61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f482c347.css",
+    "static/js/main.ca756f61.js"
+  ]
+}
